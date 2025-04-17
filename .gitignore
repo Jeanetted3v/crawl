@@ -9,6 +9,9 @@ __pycache__/
 # data 
 /data
 
+# requirements.txt
+requirements.txt
+
 # Distribution / packaging
 .Python
 build/
