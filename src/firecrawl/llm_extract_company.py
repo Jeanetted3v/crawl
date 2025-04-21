@@ -3,8 +3,11 @@ python -m src.llm_extract
 """
 import logging
 import os, json
+from typing import List
+from enum import Enum
 import asyncio
 from dotenv import load_dotenv
+from pydantic import BaseModel, Field
 from pydantic_ai import Agent
 load_dotenv()
 
@@ -78,6 +81,7 @@ async def translate(extracted_info: str) -> None:
     with open("./data/firecrawl/translated_info.txt", "w", encoding="utf-8") as f:
         f.write(translated_info)
     logging.info(f"Translated information saved to data/translated_info.txt")
+
 
 async def main():
     extracted_info = await extract_website_content()
