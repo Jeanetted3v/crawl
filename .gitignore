@@ -8,9 +8,15 @@ __pycache__/
 
 # data 
 /data
+!data/.gitkeep
+!data/crawl4ai/.gitkeep
+.history
 
 # requirements.txt
 requirements.txt
+
+# macOs
+.DS_Store
 
 # Distribution / packaging
 .Python
