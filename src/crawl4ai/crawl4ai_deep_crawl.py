@@ -6,7 +6,8 @@ import asyncio
 from crawl4ai import AsyncWebCrawler, CrawlerRunConfig
 from crawl4ai.deep_crawling import (
     BFSDeepCrawlStrategy,
-    BestFirstCrawlingStrategy
+    BestFirstCrawlingStrategy,
+    DFSDeepCrawlStrategy,
 )
 from crawl4ai.content_scraping_strategy import LXMLWebScrapingStrategy
 from crawl4ai.deep_crawling.scorers import KeywordRelevanceScorer

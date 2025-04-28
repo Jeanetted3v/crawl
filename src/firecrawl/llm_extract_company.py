@@ -3,11 +3,8 @@ python -m src.llm_extract
 """
 import logging
 import os, json
-from typing import List
-from enum import Enum
 import asyncio
 from dotenv import load_dotenv
-from pydantic import BaseModel, Field
 from pydantic_ai import Agent
 load_dotenv()
 
@@ -19,7 +16,7 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 
 async def extract_website_content() -> str:
     extraction_agent = Agent(
-        model="openai:gpt-4.1-mini",
+        model="openai:gpt-4o-mini",
         result_type=str,
         system_prompt="""
         You are an assistant specialized in content extraction. Your job is to extract 
@@ -61,7 +58,7 @@ async def extract_website_content() -> str:
 
 async def translate(extracted_info: str) -> None:
     translation_agent = Agent(
-        model="openai:gpt-4.1-mini",
+        model="openai:gpt-4o-mini",
         result_type=str,
         system_prompt="""
         You are a translation agent. You will be given extracted information

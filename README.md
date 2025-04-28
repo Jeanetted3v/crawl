@@ -1,5 +1,5 @@
-# Crawl
-* This repositary is for experimenting various web crawling and scraping tools for LLM projects. 
+# Crawl (Playground)
+* This repositary is a playground for experimenting various web crawling and scraping tools for LLM projects. 
 * Experimenting with:
     1. [FireCrawl](https://docs.firecrawl.dev/introduction)
     2. [Crawl4AI](https://github.com/unclecode/crawl4ai)
@@ -31,4 +31,5 @@ crawl/
 ```
 
 ## Current Challenges
-* LLM having difficulty extracting everything from the crawled data, likely due the complexity of the documents. 
+* After crawling, a LLM is employed to further extract data from the raw data. 
+* Exploring various method for extraction. 
